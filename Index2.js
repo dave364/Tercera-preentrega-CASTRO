@@ -1,5 +1,5 @@
 let nombre = prompt("Hola!, cual es tu nombre?");
-alert("Bienvenido " +nombre +" Al Mejor Carrito de compras de La HISTORIA!!! donde podras obtener decuentos con solo un click");
+alert("Bienvenido " +nombre +" al mejor Carrito de compras de La HISTORIA!!! donde podras obtener decuentos con solo un click");
 let compra = true;
 let total = 0;
 let descuento = 0;
@@ -36,7 +36,7 @@ function alcarrito (producto) {
 }
 //////////////////PRINCIPAL//////////////////////////
 while (compra) {
-    let productos = parseInt(prompt("Que producto desea agregar al carrito? 1.Converse($1000), 2.Vanz($1600), 3.Pocholin($2000), 4.Reeboks($1500)"))
+    let productos = parseInt(prompt("Que producto desea agregar al carrito? \n1.Converse($1000) \n2.Vanz($1600) \n3.Pocholin($2000) \n4.Reebok($1500)"))
     alcarrito(productos)
 
     let siguecomprando = prompt("¿Desea seguir comprando? (si/no):")
