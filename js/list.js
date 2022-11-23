@@ -74,8 +74,6 @@ const zapatos = {
     nike:nike,
 }
 const shopcontent = document.getElementById("shopContent");
-const verCarrito = document.getElementById("verCarrito");
-const modalContainer =document.getElementById("modal-container");
 
 let carrito = [];
 
@@ -97,12 +95,15 @@ if (!zapatos.anuncioParam) {
        content.append(compra);
       
        compra.addEventListener("click", () =>{
+        carrito = localStorage.getItem("cart")?JSON.parse(localStorage.getItem("cart")):[]
+
           carrito.push({
               id : zapato.id,
               img: zapato.img,
               nombre: zapato.nombre,
               precio: zapato.precio,
           });
+          localStorage.setItem("cart",JSON.stringify(carrito))
        })
       
       });
@@ -111,38 +112,3 @@ if (!zapatos.anuncioParam) {
 }
 
 
-
-verCarrito.addEventListener("click", () => {
-
-    const modalHeader = document.createElement("div");
-    modalHeader.className = "modal-header"
-    modalHeader.innerHTML = `
-    <h1 class="modal-header-title">Carrito.</h1>
-    `;
-    modalContainer.append(modalHeader);
-
-    const modalbutton = document.createElement("h1");
-    modalbutton.innerText = "X";
-    modalbutton.className = "modal-header-button";
-
-    modalHeader.append(modalbutton);
-
-    carrito.forEach((zapato) => {
-    let carritoContent = document.createElement("div")
-    carritoContent.className = "modal-content"
-    carritoContent.innerHTML = `
-      <img src="${zapato.img}">
-      <h3>${zapato.nombre}</h3>
-      <p>${zapato.precio} $</p>
-    `;
-
-    modalContainer.append(carritoContent);
- });
-
- const total = carrito.reduce((acc, el) => acc + el.precio, 0);
-
- const totalBuying = document.createElement("div")
- totalBuying.className = "total-content"
- totalBuying.innerHTML = `total a pagar: ${total} $`;
- modalContainer.append(totalBuying);
-});
