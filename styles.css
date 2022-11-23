@@ -1,0 +1,161 @@
+body {
+    margin: 0px;
+}
+/*barra de navegacion*/
+.nav-container {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    background-color: black;
+}
+
+.navbar-logo {
+    justify-self: start;
+    margin-left: 20px;
+    color: white;
+    margin-top: 4vh;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Arial;
+
+}
+
+/*estilos del banner*/
+.banner {
+    background-size: cover;
+    background-position: center;
+    height: 35vh;
+    background-image: linear-gradient(rgba(0,0,0, 2.4), rgba(0,0,0, 0.4)),
+    url(./img/fondo_1.jpg);
+
+} 
+
+.banner-container {
+    text-align: center;
+    padding: 2% 0;
+}
+
+.banner h1 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0, 0.2);
+    font-size: 75px;
+    font-weight: bold;
+}
+
+.banner p {
+    font-size: 30px;
+    color: white;
+    opacity: 0.7;
+    text-shadow: 1px 1px 3px rgba(0,0,0, 0.2);
+}
+
+.Shop-content {
+    /*background-size: cover;
+    background-image: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.4)),
+    url(./fondo_1.jpg);*/
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: Arial;
+}
+
+.card img {
+    width: 90%;
+    height: 250px;
+}
+
+.price {
+    color: gray;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+.modal-container {
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: #fff;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+  }
+  
+  .modal-container::-webkit-scrollbar {
+    display: none;
+  }
+  .modal-header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0a0909;
+    color: #fff;
+    width: 100%;
+  }
+  
+  .modal-header-title {
+    justify-self: start;
+  }
+  
+  .modal-header-button {
+    cursor: pointer;
+  }
+  
+  .modal-container .modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+  }
+  
+  .modal-container div img {
+    height: 120px;
+    width: 120px;
+  }
+  
+  .total-content {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+  }
