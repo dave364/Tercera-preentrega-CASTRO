@@ -152,6 +152,14 @@ body {
     height: 120px;
     width: 120px;
   }
+
+  .quitar-product {
+    cursor: pointer;
+  }
+
+  .ver-carrito {
+    cursor: pointer;
+  }
   
   .total-content {
     font-size: 25px;
