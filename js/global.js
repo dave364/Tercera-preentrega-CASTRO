@@ -21,6 +21,7 @@ const editCar = () => {
 
     modalHeader.append(modalbutton);
     const carrito = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : []
+    var cont = 0 
     carrito.forEach((zapato) => {
         let carritoContent = document.createElement("div")
         carritoContent.className = "modal-content"
@@ -33,14 +34,18 @@ const editCar = () => {
         modalContainer.append(carritoContent);
 
         let quitar = document.createElement("div")
+        quitar.id = cont;
+        cont++;
 
         quitar.innerText = "❌";
         quitar.className = "quitar-product";
         carritoContent.append(quitar);
-        quitar.addEventListener("click", () => {
-            console.log("cart")
-            cart = carrito.filter((cart) => cart.id !== zapato.id);
-            console.log("cart", cart)
+        quitar.addEventListener("click", (e) => {
+            cart = carrito.filter((item) => (item.index != e.target.id));
+            cart = cart.map((item, index) => {
+                item.index = index
+                return item;
+            })
             localStorage.setItem("cart", JSON.stringify(cart))
             editCar();
         });
@@ -54,7 +59,6 @@ const editCar = () => {
     totalBuying.innerHTML = `total a pagar: ${total} $`;
     modalContainer.append(totalBuying);
 };
-
 
 
 verCarrito.addEventListener("click", editCar);

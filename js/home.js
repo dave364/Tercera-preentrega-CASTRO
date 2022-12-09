@@ -1,3 +1,4 @@
+/*
 const zapatos = [
     {
         id: 1,
@@ -6,7 +7,7 @@ const zapatos = [
         img:
             "./img/converse.jpg",
     },
-    {
+    { 
         id: 2,
         nombre: "Vanz",
         marca: "vanz",
@@ -27,28 +28,39 @@ const zapatos = [
         img:
             "./img/nike.jpg",
     },
-];
+];*/
 
-const shopcontent = document.getElementById("shopContent");
+const options = {
+    method: "GET"
+  };
+  
+  // Petición HTTP
+  fetch("https://demo9762945.mockable.io/menu", options)
+    .then(response => response.json())
+    .then(zapatos => {
+        
+        const shopcontent = document.getElementById("shopContent");
 
-zapatos.forEach((zapato) => {
-    let content = document.createElement("div");
-    content.className = "card";
-    content.innerHTML = `  
-   <img src="${zapato.img}"
-   <h3>${zapato.nombre}</h3>
-   <p></p>
-   `;
-    shopcontent.append(content);
+        zapatos.menu.forEach((zapato) => {
+            let content = document.createElement("div");
+            content.className = "card";
+            content.innerHTML = `  
+           <img src="${zapato.img}"
+           <h3>${zapato.nombre}</h3>
+           <p></p>
+           `;
+            shopcontent.append(content);
+        
+            let compra = document.createElement("button")
+            compra.innerText = "Seleccionar";
+            compra.className = "compra";
+        
+            content.append(compra);
+        
+            compra.addEventListener("click", () => {
+                window.location.href = `zapatos.html?marca=${zapato.marca}`
+            })
+        });
+        
+    });
 
-    let compra = document.createElement("button")
-    compra.innerText = "Seleccionar";
-    compra.className = "compra";
-
-    content.append(compra);
-
-    compra.addEventListener("click", () => {
-        window.location.href = `zapatos.html?marca=${zapato.marca}`
-    })
-
-});
