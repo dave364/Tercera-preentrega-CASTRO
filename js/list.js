@@ -7,7 +7,7 @@ const options = {
   };
   
   // Petición HTTP
-  fetch("https://demo5436660.mockable.io/zapatos", options)
+  fetch("http://demo5436660.mockable.io/zapatos", options)
     .then(response => response.json())
     .then(zapatos => {
         console.log(zapatos);
