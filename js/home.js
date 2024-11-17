@@ -35,10 +35,10 @@ const options = {
   };
   
   // Petición HTTP
-  fetch("https://demo9762945.mockable.io/menu", options)
+  fetch("http://demo5436660.mockable.io/menu", options)
     .then(response => response.json())
     .then(zapatos => {
-        
+        console.log(zapatos);
         const shopcontent = document.getElementById("shopContent");
 
         zapatos.menu.forEach((zapato) => {

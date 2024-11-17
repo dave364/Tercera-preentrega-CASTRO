@@ -7,10 +7,10 @@ const options = {
   };
   
   // Petición HTTP
-  fetch("https://demo5462988.mockable.io/zapatos", options)
+  fetch("https://demo5436660.mockable.io/zapatos", options)
     .then(response => response.json())
     .then(zapatos => {
-    
+        console.log(zapatos);
         const shopcontent = document.getElementById("shopContent");
 
         let carrito = [];
