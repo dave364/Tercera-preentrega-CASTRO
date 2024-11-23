@@ -1,0 +1,61 @@
+{
+  "mangas": [
+    {
+      "title": "One Piece",
+      "cover": "https://pack-yak.intomanga.com/images/manga/One-Piece/chapter/1/page/1/e720d0bf-cc16-4419-8118-dcc03433f8b7"
+    },
+    {
+      "title": "Naruto",
+      "cover": "https://images.cdn2.buscalibre.com/fit-in/360x360/1a/26/1a26bf690cb1971e644414899ad4ed7a.jpg"
+    },
+    {
+      "title": "Shingeki no Kyojin",
+      "cover": "https://pack-yak.intomanga.com/thumbnails/manga/Shingeki-no-Kyojin/f5abfdce-15e5-42ca-93f4-98f824cc1c42"
+    },
+    {
+      "title": "Sailor Moon",
+      "cover": "https://www.ivrea.com.ar/storage/2021/01/sailormoon01.jpg"
+    },
+    {
+      "title": "Dragon Ball",
+      "cover": "https://i1.whakoom.com/large/20/35/788d7bbadf254e2e907685a5027410f1.jpg"
+    },
+    {
+      "title": "Bleach",
+      "cover": "https://images.cdn3.buscalibre.com/fit-in/360x360/22/81/2281eccf47fcc4a4c7108cc3450cad26.jpg"
+    },
+    {
+      "title": "My Hero Academia",
+      "cover": "https://www.ivrea.com.ar/storage/2024/04/myheroacademia01.jpg"
+    },
+    {
+      "title": "Death Note",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/6/6f/Death_Note_Vol_1.jpg"
+    },
+    {
+      "title": "Demon Slayer",
+      "cover": "https://i1.whakoom.com/small/37/32/3a219f7ce803431da44551aa4c101e5e.jpg"
+    },
+    {
+      "title": "Fairy Tail",
+      "cover": "https://www.ivrea.com.ar/storage/2024/04/fairytail01.jpg"
+    },
+    {
+      "title": "Jujutsu Kaisen",
+      "cover": "https://static.wikia.nocookie.net/jujutsu-kaisen/images/0/0e/Volume_1.png/"
+    },
+    {
+      "title": "Haikyuu!!",
+      "cover": "https://somoskudasai.com/wp-content/uploads/2020/10/Elfm9IEXgAMq6t8.jpg"
+    },
+    {
+      "title": "The Prince of Tennis",
+      "cover": "https://images.cdn1.buscalibre.com/fit-in/360x360/56/ac/56ac3c6a5ac668c2b4e55e1cb0663975.jpg"
+    },
+    {
+      "title": "Fullmetal Alchemist",
+      "cover": "https://www.ivrea.com.ar/storage/2020/11/fullmetalalchemist01.jpg"
+    }
+    
+  ]
+}

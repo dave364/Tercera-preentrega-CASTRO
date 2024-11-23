@@ -1,30 +1,290 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0px;
-}
-/*barra de navegacion*/
-.nav-container {
-    position: sticky;
-    z-index: 3;
-    top: 0;
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    height: 12vh;
-    background-color: black;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-.navbar-logo {
-    justify-self: start;
-    margin-left: 20px;
-    color: white;
-    margin-top: 4vh;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 30px;
-    font-family: Arial;
-
+/* Navbar Styles */
+.nav .navbar {
+  display: flex;
+  justify-content: space-between; /* Alinea el logo a la izquierda y los enlaces a la derecha */
+  align-items: center; /* Alinea los elementos verticalmente */
+  background-color: rgba(255, 255, 255, 0.8) !important;
+   /* Ajusta el padding para tener espacio alrededor */
+  --bs-navbar-padding-y: -0.5rem;
+  border-radius: 100vw;
+  height: 90px;
+  margin-top: 1rem;
+  box-shadow: 0 30px 60px 0 rgba(27, 31, 10, 0.08);
+  left: 0;
+  right: 0;
+  max-width: 1320px;
+  width: 100%;
+  margin-left: auto; /* Centra el navbar horizontalmente */
+  margin-right: auto; /* Centra el navbar horizontalmente */
 }
+
+/* Logo */
+.logo img {
+  
+  width: auto;
+}
+
+.logoimg {
+  height: 70px;
+  width: auto;
+  margin: 0 8px; /* Ajusta los márgenes según sea necesario */
+}
+
+/* Enlaces de navegación */
+.nav-links {
+  display: flex;
+  justify-content: center; /* Centra los enlaces horizontalmente */
+  gap: 20px;
+}
+
+.nav-links a {
+  color: rgb(4, 4, 4);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 16px !important;
+  margin: 0 !important;
+  border-radius: 1rem !important;
+  transition: 0.3s all !important;
+}
+
+.nav-links a:hover {
+  background-color: #aac3dd94;;
+}
+
+/* Botón de explorar */
+.explore-btn {
+  padding: 1.25rem 2rem;
+  background-color: #393193;
+  border-color: #393193; 
+  color: #ffffff ;
+  box-shadow: none;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1.2rem;
+    line-height: 1.7;
+    border-width: 2px;
+    font-weight: 600;
+    margin: 0.6rem 0.6rem;
+    font-family: 'Manrope', sans-serif;
+}
+
+.explore-btn:hover {
+  background-color: #5f55c1;
+}
+
+/* Sección Hero */
+.hero {
+  position: static;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Contenedor del Video */
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Superposición Opaca */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Ajusta la opacidad aquí */
+  z-index: -1;
+}
+
+/* Contenido */
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.hero-btn {
+  padding: 1.25rem 2rem;
+  color: #ffffff; /* Texto blanco */
+  background-color: transparent; /* Fondo transparente */
+  border: 2px solid #ffffff; /* Borde blanco */
+  border-radius: 100px; /* Bordes redondeados */
+  cursor: pointer;
+  font-size: 1.5rem; /* Tamaño del texto */
+  font-weight: 600;
+  text-decoration: none; /* Quitar subrayado */
+  transition: all 0.3s ease-in-out; /* Animación suave */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-btn:hover {
+  background-color: #ffffff; /* Fondo blanco al pasar el mouse */
+  color: #393193; /* Texto con un color contrastante */
+  border: 2px solid #ffffff; /* Mantener el borde blanco */
+}
+
+.hero-title img {
+  filter: brightness(0) invert(1); /* Cambia la imagen a blanca */
+  width: auto; /* Mantén su proporción */
+  height: auto; /* Ajusta según sea necesario */
+  transition: filter 0.3s; /* Para un efecto suave en caso de hover */
+  height: 140px;
+}
+
+.hero-title img:hover {
+  filter: brightness(0.8) invert(1); /* Ejemplo de un cambio sutil en hover */
+}
+
+#mangas-container {
+  display: none; /* Inicialmente oculto */
+}
+
+#mangas-container.visible {
+  display: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin-top: -60px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  padding: 56px;
+  max-width: 66%;
+}
+
+#mangas-container.visible {
+  opacity: 1;
+  transform: scale(1); /* Vuelve al tamaño normal */
+}
+
+
+.manga-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ddd;
+  border-radius: 70px 70px 10px 10px;
+  width: 300px; /* Tamaño fijo de las cartas */
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Manrope', sans-serif;
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(50px); /* Empieza desplazada hacia abajo */
+  animation: slideIn 0.5s ease forwards; /* Aparece con animación */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efectos al pasar el mouse */
+}
+
+.manga-card img {
+  width: 100%;
+  height: 400px; /* Tamaño fijo para todas las imágenes */
+  object-fit: cover; /* Ajusta la imagen para evitar deformaciones */
+  border-radius: 70px 70px 10px 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  margin-bottom: 12px; /* Espaciado entre imagen y texto */
+}
+
+.manga-card h3 {
+  font-size: 1.5rem; /* Tamaño del título */
+  font-weight: bold;
+  color: #393193; /* Color del texto */
+  margin-bottom: 8px; /* Espaciado debajo del título */
+}
+
+.manga-card:hover {
+  transform: translateY(-10px); /* Eleva la carta al pasar el mouse */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Más sombra al hover */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px); /* Las cartas comienzan desplazadas hacia abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Terminan en su posición original */
+  }
+}
+
+.content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*estilos del banner*/
 .banner {
