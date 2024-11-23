@@ -1,4 +1,4 @@
-const editCar = () => {
+/*const editCar = () => {
   const modalContainer = document.getElementById("modal-container");
   modalContainer.innerHTML = "";
   modalContainer.style.display = "flex";
@@ -66,8 +66,85 @@ const editCar = () => {
 // Evento para abrir el carrito
 verCarrito.addEventListener("click", editCar);
 
+*/
+
+// JavaScript para manejar el cambio de clases
+document.addEventListener("DOMContentLoaded", function () {
+    const navbarToggler = document.querySelector(".navbar-toggler");
+  
+    navbarToggler.addEventListener("click", function () {
+      // Cambiar la clase cuando el menú está expandido o colapsado
+      navbarToggler.classList.toggle("collapsed");
+    });
+  });
+  
+    
+
+  // Seleccionamos todas las opciones de menú
+  const menuItems = document.querySelectorAll('.navbar-nav .nav-link');
+  
+  // Seleccionamos el botón de hamburguesa
+  const navbarCollapse = document.getElementById('navbarSupportedContent');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+
+  // Al hacer clic en cualquier opción del menú, colapsamos el menú y restauramos el icono de hamburguesa
+  menuItems.forEach(item => {
+    item.addEventListener('click', function() {
+      const bootstrapCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false // No activar el toggle, solo cerrar
+      });
+      bootstrapCollapse.hide();
+
+      // Aseguramos que el icono de hamburguesa vuelva a su estado original
+      navbarToggler.setAttribute('aria-expanded', 'false');
+      navbarToggler.classList.add('collapsed');
+    });
+  });
 
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const mangasLink = document.getElementById("mangas-link");
+    const hero = document.querySelector(".hero");
+    const mobileMediaQuery = window.matchMedia("(max-width: 767px)");
+  
+    // Función para manejar el clic en "Mangas"
+    const handleMangasClick = (e) => {
+      e.preventDefault(); // Prevenir comportamiento por defecto del enlace
+  
+      if (mobileMediaQuery.matches) { // Solo para móviles
+        hero.style.transition = "all 1s ease-in-out"; // Añadir transición suave
+        hero.style.height = "800vh"; // Ajustar la altura de .hero
+        hero.classList.add("hero-expanded"); // Añadir clase para los pseudoelementos
+      }
+    };
+  
+    // Función para manejar los cambios de resolución
+    const handleResolutionChange = () => {
+      if (mobileMediaQuery.matches) {
+        // Si estamos en móvil, habilitar comportamiento móvil
+        hero.style.transition = ""; // Restablecer transición
+        hero.style.height = ""; // Asegurar altura móvil
+      } else {
+        // Si estamos en escritorio, limpiar estilos móviles
+        hero.style.transition = ""; // Eliminar transición
+        hero.style.height = ""; // Restaurar altura original
+        hero.classList.remove("hero-expanded"); // Eliminar clases móviles
+      }
+    };
+  
+    // Agregar el evento de clic al enlace "Mangas"
+    mangasLink.addEventListener("click", handleMangasClick);
+  
+    // Escuchar cambios en el tamaño de la pantalla
+    mobileMediaQuery.addEventListener("change", handleResolutionChange);
+  
+    // Ejecutar al cargar la página para aplicar la configuración inicial
+    handleResolutionChange();
+  });
+  
+  
+  
+  
 
 
 

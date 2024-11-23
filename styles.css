@@ -6,75 +6,203 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+
+    font-style: normal;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #232323;
+    position: relative;
+    font-family: Manrope;
 }
 
-/* Navbar Styles */
-.nav .navbar {
+.cid {
+  z-index: 1000;
+  width: 100%;
+  position: relative;
+}
+
+
+
+section, .container, .container-fluid {
+  position: relative;
+  word-wrap: break-word;
+}
+
+.cid .navbar {
+  min-height: 90px;
+  transition: all 0.3s;
+  border-bottom: 1px solid transparent;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.navbar-dropdown.navbar-fixed-top {
+  position: fixed;
+}
+
+.navbar-fixed-top {
+  top: auto;
+}
+
+.navbar {
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  -webkit-align-items: center;
+  -webkit-justify-content: space-between;
+}
+
+.navbar-dropdown {
+  left: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.45s ease;
+  z-index: 1030;
+  background: #282828;
+}
+
+section, .container, .container-fluid {
+  position: relative;
+  word-wrap: break-word;
+}
+
+.cid .container {
   display: flex;
-  justify-content: space-between; /* Alinea el logo a la izquierda y los enlaces a la derecha */
-  align-items: center; /* Alinea los elementos verticalmente */
-  background-color: rgba(255, 255, 255, 0.8) !important;
-   /* Ajusta el padding para tener espacio alrededor */
-  --bs-navbar-padding-y: -0.5rem;
-  border-radius: 100vw;
   height: 90px;
-  margin-top: 1rem;
-  box-shadow: 0 30px 60px 0 rgba(27, 31, 10, 0.08);
+  padding: 0.5rem 0.6rem;
+  flex-wrap: nowrap;
+  background: rgba(255, 255, 255, 0.8) !important;
   left: 0;
   right: 0;
-  max-width: 1320px;
-  width: 100%;
-  margin-left: auto; /* Centra el navbar horizontalmente */
-  margin-right: auto; /* Centra el navbar horizontalmente */
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 100vw;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 30px 60px 0 rgba(27, 31, 10, 0.08);
 }
 
-/* Logo */
-.logo img {
-  
-  width: auto;
+.cid .navbar-brand {
+  flex-shrink: 0;
+  align-items: center;
+  margin-right: 0;
+  padding: 10px 0;
+  transition: all 0.3s;
+  word-break: break-word;
+  z-index: 1;
 }
 
-.logoimg {
-  height: 70px;
-  width: auto;
-  margin: 0 8px; /* Ajusta los márgenes según sea necesario */
+.menu .navbar-brand {
+  display: -webkit-flex;
 }
 
-/* Enlaces de navegación */
-.nav-links {
-  display: flex;
-  justify-content: center; /* Centra los enlaces horizontalmente */
-  gap: 20px;
+.menu .navbar-brand span {
+  display: flex
+;
+  display: -webkit-flex;
 }
 
-.nav-links a {
-  color: rgb(4, 4, 4);
-  text-decoration: none;
-  font-size: 20px;
-  padding: 16px !important;
-  margin: 0 !important;
-  border-radius: 1rem !important;
-  transition: 0.3s all !important;
+.navbar-dropdown .navbar-brand span {
+  vertical-align: -4px;
 }
 
-.nav-links a:hover {
-  background-color: #aac3dd94;;
+.navbar-dropdown .navbar-logo {
+  margin-right: 0.8rem;
+  transition: margin 0.3s ease-in-out;
+  vertical-align: middle;
 }
 
-/* Botón de explorar */
-.explore-btn {
+h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-4, .display-5, .display-7, span, p, a {
+  line-height: 1;
+  word-break: break-word;
+  word-wrap: break-word;
+  font-weight: 400;
+}
+
+.menu .navbar-brand .navbar-caption-wrap {
+  display: -webkit-flex;
+}
+
+.cid .navbar-brand .navbar-caption {
+  line-height: inherit !important;
+}
+
+.cid .navbar-caption {
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}
+
+
+
+@media (min-width: 992px) {
+  .menu .navbar-nav.nav-dropdown {
+      display: -webkit-flex;
+  }
+}
+
+.cid ul.navbar-nav {
+  flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
+  .cid .navbar-nav {
+      padding-left: 1.5rem;
+  }
+}
+
+.cid .navbar-nav {
+  margin: auto;
+  margin-left: 0;
+  margin-left: auto;
+}
+
+.cid .mbr-section-btn {
+    margin: -0.6rem -0.6rem;
+}
+
+.cid .navbar-buttons {
+  text-align: center;
+  min-width: 140px;
+}
+
+nav .mbr-section-btn {
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+
+.mbr-section-btn {
+  margin-left: -0.6rem;
+  margin-right: -0.6rem;
+  font-size: 0;
+}
+
+.btn-primary, .btn-primary:active {
+  background-color: #393193 !important;
+  border-color: #393193 !important;
+  color: #ffffff !important;
+  box-shadow: none;
+}
+
+.btn {
   padding: 1.25rem 2rem;
-  background-color: #393193;
-  border-color: #393193; 
-  color: #ffffff ;
+  border-radius: 4px;
+}
+
+.mbr-section-btn .btn:not(.btn-form) {
+  padding: 1.25rem 2rem;
   box-shadow: none;
   border: none;
   border-radius: 100px;
   cursor: pointer;
-  transition: background-color 0.3s;
   font-size: 1.2rem;
     line-height: 1.7;
     border-width: 2px;
@@ -83,14 +211,53 @@ body {
     font-family: 'Manrope', sans-serif;
 }
 
-.explore-btn:hover {
-  background-color: #5f55c1;
+.mbr-section-btn .btn:not(.btn-form):hover {
+  background-color: #92919a; /* Cambio de color cuando se hace hover */
 }
+
+
+.nav-item .display-4 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.btn {
+  border-width: 2px;
+}
+
+.btn {
+  font-weight: 600;
+  border-width: 1px;
+  font-style: normal;
+  margin: 0.6rem 0.6rem;
+  white-space: normal;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex
+;
+  align-items: center;
+  justify-content: center;
+  word-break: break-word;
+}
+
+.cid .navbar-nav .nav-item .nav-link {
+  padding: 16px !important;
+  margin: 0 !important;
+  border-radius: 1rem !important;
+  transition: 0.3s all !important;
+}
+
+.cid .navbar-nav .nav-item .nav-link:hover {
+  background-color: #aac3dd94;  /* Cambia el color de fondo al hacer hover */
+  color: #fff; /* Cambia el color del texto si lo deseas */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño del link */
+}
+
 
 /* Sección Hero */
 .hero {
   position: static;
-  height: 100vh;
+  height: 110vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,8 +298,9 @@ body {
 
 /* Contenido */
 .content {
-  position: relative;
+  position: absolute;
   z-index: 1;
+  margin-left: 4rem;
 }
 
 .hero-title {
@@ -183,7 +351,9 @@ body {
   display: none; /* Inicialmente oculto */
 }
 
-#mangas-container.visible {
+#mangas-container {
+  margin-left: 100px;
+  margin-right: auto;
   display: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -257,6 +427,237 @@ body {
 
 
 
+/* Pantallas Muy Grandes (>1440px) */
+@media (min-width: 1440px) {
+  #mangas-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* Pantallas Grandes (1024px a 1440px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  #mangas-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Cuatro columnas */
+    gap: 20px; /* Espaciado entre las cartas */
+    padding: 40px; /* Ajuste interno del contenedor */
+    margin-top: 0; /* Alinea el contenedor correctamente */
+    max-width: 90%; /* Asegura que no se desborde */
+  }
+}
+
+
+/* Pantallas Medianas (768px a 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #mangas-container {
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas */
+    gap: 15px;
+    padding: 40px; /* Ajusta el padding */
+    margin-top: 0; /* Elimina desplazamiento hacia arriba */
+  }
+}
+
+
+/* Pantallas Pequeñas (<768px) */
+@media (max-width: 767px) {
+  #mangas-container {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 10px;
+    padding: 20px; /* Reduce espacio interno */
+    margin: 0 auto; /* Centrado */
+    height: 410rem;
+  }
+
+  .manga-card {
+    padding: 10px; /* Espaciado interno reducido */
+    width: 100%; /* Carta ocupa todo el ancho */
+  }
+
+  .manga-card img {
+    height: auto; /* Ajuste dinámico de la altura */
+  }
+
+  .content {
+    position: absolute;
+    z-index: 1;
+    margin-left: 0rem;
+}
+
+.hero-title img {
+  height: 100px;
+}
+
+.cid .navbar-brand {
+  padding: 0px 0;
+}
+}
+
+@media (max-width: 991px) {
+  .cid .navbar-collapse {
+      z-index: -1 !important;
+      position: absolute;
+      top: 105%;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+      border-radius: 1.5rem;
+      background: #ffffff;
+      opacity: 1;
+      border-color: rgba(255, 255, 255, 0.8) !important;
+      background: rgba(255, 255, 255, 0.8) !important;
+      backdrop-filter: blur(8px);
+      text-align: center;
+  }
+  .cid .container {
+    display: flex;
+    height: 85px;
+   padding: 0.5rem 0.6rem; 
+    flex-wrap: nowrap;
+    background: rgba(255, 255, 255, 0.8) !important;
+    left: 0;
+    right: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 100vw;
+    margin-top: 0px;
+    background-color: #ffffff;
+    box-shadow: 0 30px 60px 0 rgba(27, 31, 10, 0.08);
+}
+}
+
+@media (max-width: 767px) {
+  .btn {
+      padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Botón de hamburguesa */
+.navbar-toggler {
+  padding: 1px!important;
+  background-color: transparent; /* Fondo transparente */
+  width: 40px; /* Asegura que el botón tenga un tamaño adecuado */
+  height: 30px; /* Ajustamos la altura para que las líneas se alineen correctamente */
+  border: none!important;
+}
+
+/* Icono de las tres líneas del botón de hamburguesa */
+.navbar-toggler .navbar-toggler-icon {
+  background-color: #333; /* Color de las tres líneas */
+  width: 30px; /* Ajustamos el tamaño de las líneas */
+  height: 3px; /* Ajustamos el grosor de las líneas */
+  position: relative;
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Líneas superior e inferior */
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Línea superior */
+.navbar-toggler .navbar-toggler-icon::before {
+  top: -12px; /* Ajustar esta propiedad para mover la línea superior hacia arriba */
+  left: 0px;
+}
+
+/* Línea inferior */
+.navbar-toggler .navbar-toggler-icon::after {
+  bottom: -12px; /* Ajustar esta propiedad para mover la línea inferior hacia arriba */
+  left: 0px;
+}
+
+/* Cuando el menú se abre, el botón se convierte en una "X" */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-color: transparent; /* Eliminar la línea central */
+  border: none!important;
+  height: 0px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  transform: rotate(45deg); /* Rotar la línea superior */
+  top: -3px; /* Posicionar en el centro */
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  transform: rotate(-45deg); /* Rotar la línea inferior */
+  bottom: -0px; /* Posicionar en el centro */
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none !important;  /* Elimina el borde cuando está enfocado */
+  box-shadow: none !important;  /* Elimina la sombra */
+  border: none !important;  /* Elimina el borde */
+}
+
+.cid button.navbar-toggler {
+  outline: none;
+  width: 50px; /* Ajusta el ancho */
+  height: 20px; /* Ajusta la altura */
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  align-self: center;
+  top: -5px; /* Ajuste para subir el botón (puedes cambiar este valor según lo necesites) */
+}
+
+.cid .navbar-toggler .navbar-toggler-icon {
+  background-color: #333;
+  width: 30px; /* Asegura que las tres líneas sean de un tamaño adecuado */
+  height: 3px; /* Grosor de las líneas */
+  position: relative;
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Líneas superior e inferior */
+.cid .navbar-toggler .navbar-toggler-icon::before,
+.cid .navbar-toggler .navbar-toggler-icon::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Línea superior */
+.cid .navbar-toggler .navbar-toggler-icon::before {
+  top: -7px;
+  left: 0px;
+}
+
+/* Línea inferior */
+.cid .navbar-toggler .navbar-toggler-icon::after {
+  bottom: -8px;
+  left: 0px;
+}
+
+/* Cambio a "X" cuando el menú se abre */
+.cid .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-color: transparent;
+  border: none!important;
+  height: 0px; /* Elimina la altura de la línea central */
+}
+
+.cid .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+  top: -3;
+}
+
+.cid .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+  bottom: 4px;
+}
 
 
 
@@ -278,6 +679,80 @@ body {
 
 
 
+/* Navbar Styles 
+.nav .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  --bs-navbar-padding-y: -0.5rem;
+  border-radius: 100vw;
+  height: 90px;
+  margin-top: 1rem;
+  box-shadow: 0 30px 60px 0 rgba(27, 31, 10, 0.08);
+  left: 0;
+  right: 0;
+  max-width: 1320px;
+  width: 100%;
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+
+.logo img {
+  
+  width: auto;
+}
+
+.logoimg {
+  height: 70px;
+  width: auto;
+  margin: 0 8px; 
+}
+
+
+.nav-links {
+  display: flex;
+  justify-content: center; 
+  gap: 20px;
+}
+
+.nav-links a {
+  color: rgb(4, 4, 4);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 16px !important;
+  margin: 0 !important;
+  border-radius: 1rem !important;
+  transition: 0.3s all !important;
+}
+
+.nav-links a:hover {
+  background-color: #aac3dd94;;
+}
+
+
+.explore-btn {
+  padding: 1.25rem 2rem;
+  background-color: #393193;
+  border-color: #393193; 
+  color: #ffffff ;
+  box-shadow: none;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1.2rem;
+    line-height: 1.7;
+    border-width: 2px;
+    font-weight: 600;
+    margin: 0.6rem 0.6rem;
+    font-family: 'Manrope', sans-serif;
+}
+
+.explore-btn:hover {
+  background-color: #5f55c1;
+}*/
 
 
 
@@ -286,7 +761,9 @@ body {
 
 
 
-/*estilos del banner*/
+/*
+
+
 .banner {
     background-size: cover;
     background-position: center;
@@ -319,7 +796,7 @@ body {
 .Shop-content {
     /*background-size: cover;
     background-image: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.4)),
-    url(./fondo_1.jpg);*/
+    url(./fondo_1.jpg);
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -426,4 +903,4 @@ body {
     padding: 20px;
     text-align: center;
     padding-top: 20px;
-  }
+  } */

@@ -1,36 +1,3 @@
-/*
-const zapatos = [
-    {
-        id: 1,
-        nombre: "Converse",
-        marca: "converse",
-        img:
-            "./img/converse.jpg",
-    },
-    { 
-        id: 2,
-        nombre: "Vanz",
-        marca: "vanz",
-        img:
-            "./img/vanz.jpg",
-    },
-    {
-        id: 3,
-        nombre: "Pocholin",
-        marca: "pocholin",
-        img:
-            "./img/pocholin.jpg",
-    },
-    {
-        id: 4,
-        nombre: "Nike",
-        marca: "nike",
-        img:
-            "./img/nike.jpg",
-    },
-];*/
-
-
 document.addEventListener("DOMContentLoaded", () => {
   // Cargar los datos desde el JSON
   fetch("./mangas.json")
@@ -97,10 +64,40 @@ function displayMangas(mangas) {
 
 
 
+/*
+const zapatos = [
+    {
+        id: 1,
+        nombre: "Converse",
+        marca: "converse",
+        img:
+            "./img/converse.jpg",
+    },
+    { 
+        id: 2,
+        nombre: "Vanz",
+        marca: "vanz",
+        img:
+            "./img/vanz.jpg",
+    },
+    {
+        id: 3,
+        nombre: "Pocholin",
+        marca: "pocholin",
+        img:
+            "./img/pocholin.jpg",
+    },
+    {
+        id: 4,
+        nombre: "Nike",
+        marca: "nike",
+        img:
+            "./img/nike.jpg",
+    },
+];*/
 
 
-
-
+/*
 const options = {
   method: "GET",
 };
@@ -133,3 +130,4 @@ fetch("https://demo5436660.mockable.io/menu", options)
       });
     });
   });
+*/

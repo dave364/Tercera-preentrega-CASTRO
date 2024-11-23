@@ -3,19 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <title>Bienvenido</title>
   </head>
-
-  <body>
+<body>
+  <section data-bs-version="5.1" class="menu menu2 cid" once="menu" id="menu-5-uur8gsQZei">
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg opacityScroll">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-logo">
+            <a href="#">
+              <img src="img/logoimg.PNG" alt="Logo MangaTronic" style="height: 4.3rem;">
+            </a>
+          </span>
+          <img src="img/logotitulo.PNG" alt="Logo MangaTronic">
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>        
+        <div class="navbar-collapse opacityScroll collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+            <li class="nav-item">
+              <a class="nav-link link text-black display-4" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-black display-4" href="#" id="mangas-link" aria-expanded="false">Mangas</a>
+            </li>
+          </ul>
+          <div class="navbar-buttons mbr-section-btn">
+            <a class="btn btn-primary display-4" href="#" id="mangas-link2">¡Explora Ya!</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
   
 
+  <section class="hero">
+    <div class="video-container">
+      <iframe 
+        id="youtube-video" 
+        class="background-video" 
+        src="https://www.youtube.com/embed/DSL3O6nKnnY?controls=0&modestbranding=1&rel=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=DSL3O6nKnnY&autohide=1&iv_load_policy=3&start=0&end=28"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div id="mangas-container" class="hidden"></div>
+    <div class="overlay"></div>
+    <div class="content">
+      <h1 class="hero-title"><img src="img/logotitulo.PNG" alt="Logo MangaTronic"></h1>
+      <p class="hero-description">¡Sumérgete en un universo de historias y aventuras visuales!</p>
+      <a href="#" class="hero-btn">Comienza Aquí</a>
+    </div>
+  </section>
   
-    <!--Barra de navegacion-->
-    <header class="nav">
+  
+  
+
+
+
+
+
+<!---
+
+  <div class="nav-container">
+    <nav class="navbar">
+      <h1 class="navbar-logo">TIENDA</h1>
+      <h1 class="ver-carrito" id="verCarrito">🛒</h1>
+    </nav>
+  </div>
+
+
+    <div class="banner">
+      <div class="banner-container">
+        >
+        <h1>Bienvenido</h1>
+        <p>Al mejor Carrito de compras de La HISTORIA!!!</p>
+      </div>
+    </div>
+    <div id="modal-container" class="modal-container"></div>
+    <div id="shopContent" class="Shop-content"></div>
+
+    <header class="nav navbar navbar-dropdown navbar-fixed-top navbar-expand-lg opacityScroll">
       <div class="navbar">
     <div class="logo">
       <img class="logoimg" src="img/logoimg.PNG" alt="Logo MangaTronic">
@@ -28,58 +104,16 @@
     <button href="#" id="mangas-link2" class="explore-btn">¡Explora Ya!</button>
       </div>
   </header>
-  <section class="hero">
-    <div class="video-container">
-      <iframe id="youtube-video" 
-      class="background-video" 
-      src="https://www.youtube.com/embed/DSL3O6nKnnY?controls=0&modestbranding=1&rel=0&showinfo=0&autoplay=1&mute=1&loop=1&playlist=DSL3O6nKnnY&autohide=1&iv_load_policy=3&start=0&end=28" 
-      title="YouTube video player" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-</iframe>
-    </div>
-    <div id="mangas-container" class="hidden" ></div>
-    <div class="overlay"></div> <!-- Capa de superposición -->
-    <div class="content">
-      <h1 class="hero-title"><img src="img/logotitulo.PNG" alt="Logo MangaTronic"></h1>
-      <p class="hero-description">¡Sumérgete en un universo de historias y aventuras visuales!</p>
-      <a href="#" class="hero-btn">Comienza Aquí</a>
-    </div>
-  </section>
-
-  
-  
 
 
-
-
-
-
-
-  <div class="nav-container">
-    <nav class="navbar">
-      <h1 class="navbar-logo">TIENDA</h1>
-      <h1 class="ver-carrito" id="verCarrito">🛒</h1>
-    </nav>
-  </div>
-
-    <!--banner-->
-    <div class="banner">
-      <div class="banner-container">
-        >
-        <h1>Bienvenido</h1>
-        <p>Al mejor Carrito de compras de La HISTORIA!!!</p>
-      </div>
-    </div>
-    <div id="modal-container" class="modal-container"></div>
-    <div id="shopContent" class="Shop-content"></div>
-
+--->
 
     <script type="text/javascript" src="./js/global.js"></script>
     <script type="text/javascript" src="./js/home.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
 
   </body>
 </html>
+
+
